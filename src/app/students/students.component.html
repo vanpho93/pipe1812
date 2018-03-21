@@ -1,4 +1,9 @@
-<div *ngFor="let student of students; let i = index" style="border: solid red 1px; padding: 10px; margin: 10px;">
+<select [(ngModel)]="sortProp">
+  <option value="age">Age</option>
+  <option value="name">Name</option>
+  <option value="height">Height</option>
+</select>
+<div *ngFor="let student of (students | sortStudent : sortProp); let i = index" style="border: solid red 1px; padding: 10px; margin: 10px;">
   <p>STT: {{ i + 1 }}</p>
   <h3>Name: {{ student.name }}</h3>
   <p>Age: {{ student.age }}</p>

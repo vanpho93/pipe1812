@@ -13,6 +13,8 @@ export class StudentsComponent implements OnInit {
     { _id: 'abcd3', name: 'Tun', age: 12, height: 120 },
     { _id: 'abcd4', name: 'Tuan', age: 14, height: 180 },
   ];
+
+  sortProp: keyof Student = 'height';
   constructor() { }
 
   ngOnInit() {
